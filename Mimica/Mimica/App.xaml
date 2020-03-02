@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mimica.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- Cabeçalho -->
+            <Style TargetType="StackLayout" x:Key="Cabecalho">
+                <Setter Property="BackgroundColor" Value="#7a0002"/>
+                <Setter Property="Padding" Value="10"/>
+            </Style>
+            <Style TargetType="Label" x:Key="CabecalhoTitulo">
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <!--Container-->
+
+            <Style TargetType="StackLayout" x:Key="Container">
+                <Setter Property="BackgroundColor" Value="#ffdbde"/>
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+            </Style>
+
+            <Style TargetType="StackLayout" x:Key="ContainerEspecial">
+                <Setter Property="BackgroundColor" Value="#ffebeb"/>
+                <Setter Property="Padding" Value="20"/>
+            </Style>
+
+            <!--Button-->
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#ffa3a4"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+
+            <!--Frame-->
+            <Style TargetType="Frame">
+                <Setter Property="OutlineColor"  Value="White"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+            </Style>
+
+            <!--Label-->
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="#910002"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

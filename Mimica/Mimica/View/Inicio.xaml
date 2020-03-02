@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:conv="clr-namespace:Mimica.View.Util"
+             x:Class="Mimica.View.Inicio">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Spacing="0">
+            <conv:Cabecalho/>
+            <StackLayout Style="{StaticResource Container}" >
+                <Label Text="{Binding MsgErro}" TextColor="Red"/>
+                <Label Text="Nome do Grupo 1" />
+                <Entry Placeholder="Unidos da Vila Matilda" Text="{Binding Jogo.Grupo1.Nome}" />
+                <Label Text="Nome do Grupo 2" />
+                <Entry Placeholder="Bonde dos Du Corte" Text="{Binding Jogo.Grupo2.Nome}"/>
+                <Label Text="Nível" />
+                <Picker SelectedItem="{Binding Jogo.Nivel}" SelectedIndex="{Binding Jogo.NivelNumerico}">
+                    <Picker.Items>
+                        <x:String>Aleatorio</x:String>
+                        <x:String>Facil</x:String>
+                        <x:String>Medio</x:String>
+                        <x:String>Dificil</x:String>
+
+                    </Picker.Items>
+                </Picker>
+                <Label Text="Time (seg)" />
+                <Entry Text="{Binding Jogo.TempoPalavra}" />
+                <Label Text="Quantidade de Rodadas" />
+                <Entry Text="{Binding Jogo.Rodadas}" />
+
+                <Button Text="Iniciar" Command="{Binding IniciarCommand}" />
+            </StackLayout>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
